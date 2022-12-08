@@ -8,7 +8,8 @@ logging.basicConfig(format="%(asctime)s - %(levelname)s - %(message)s",
                     )
 
 def start_bot(updater: Updater, CallbackContext):
-    bottext = f"Привет {updater.message.chat.first_name}!\n\nЯ повторюшка)" 
+    bottext = f"Hello {updater.message.chat.first_name}!\n\nI'm EchoBot, write me something)" 
+    logging.info(f"User {updater.message.chat.username} press start")
     updater.message.reply_text(bottext)
 
 def chat(updater: Updater, CallbackContext):
